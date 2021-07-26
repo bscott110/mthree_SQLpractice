@@ -1,3 +1,7 @@
+/*7/26/2021
+19 exercises, executed individually
+*/
+
 select *
 from exercise;
 
