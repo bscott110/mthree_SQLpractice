@@ -37,10 +37,11 @@ where ((adults+children)>=3) and (r.start_date between '2023/04/01' and '2023/04
 (r.end_date between '2023/04/01' and '2023/04/30');
 
 /*Write a query that returns a list of all guest names and the number of reservations per guest, sorted starting with the guest with the most reservations and then by the guest's last name.*/
-select name, r.guestid, count(*)
+select name, r.guestid, count(*) count
 from res r
 inner join guests g on g.guestid=r.guestid
-group by name;
+group by name 
+order by count desc;
 
 /*Write a query that displays the name, address, and phone number of a guest based on their phone number. (Choose a phone number from the existing data.)*/
 
